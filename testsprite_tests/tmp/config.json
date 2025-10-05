@@ -1,0 +1,16 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:3000",
+  "executionArgs": {
+    "projectName": "legacy",
+    "projectPath": "/home/legacy/Downloads/legacy",
+    "testIds": [],
+    "additionalInstruction": "Test the hotel booking platform comprehensively including authentication, hotel search, booking functionality, partner portal, admin dashboard, and all user roles. Focus on real functionality with actual data from MongoDB and Firebase Auth.",
+    "envs": {
+      "API_KEY": "sk-user-7ANFoyEPDmGI5pdSoV4I2IilARKwbfFxBSnlDRFdTsx24aYdh4rFt7Ni9x1K-Y6v9GR2kGHB4EmLc-SaRK5Vm9liAtfH945ZAy37vwAJWdHQwf11vOcu2mlHtUUi6Mlf0mo"
+    }
+  },
+  "proxy": "http://32ade7cb-bc56-4439-95ec-cf329f1c47a1:swA9vJAVoyQFzJEJIo8mrv6S3htWgrbB@tun.testsprite.com:8080"
+}

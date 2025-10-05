@@ -1,0 +1,265 @@
+{
+  "tech_stack": [
+    "TypeScript",
+    "Next.js 14.2.16",
+    "React 18",
+    "MongoDB",
+    "Mongoose ODM",
+    "Firebase Auth",
+    "ImageKit.io",
+    "Tailwind CSS 4.1.9",
+    "Radix UI",
+    "React Hook Form",
+    "Zod",
+    "Recharts"
+  ],
+  "features": [
+    {
+      "name": "Authentication System",
+      "description": "Firebase-based authentication with role-based access control for guests, partners, and admins",
+      "files": [
+        "lib/auth.ts",
+        "lib/auth-context.tsx",
+        "lib/firebase.ts",
+        "lib/firebase-admin.ts",
+        "components/auth/login-form.tsx",
+        "components/auth/register-form.tsx",
+        "app/login/page.tsx",
+        "app/register/page.tsx",
+        "app/api/auth/verify-admin/route.ts",
+        "middleware.ts"
+      ]
+    },
+    {
+      "name": "Hotel Search & Booking",
+      "description": "Core hotel search functionality with filters, booking system, and hotel details",
+      "files": [
+        "components/hotel-search.tsx",
+        "components/hotel-filters.tsx",
+        "components/hotel-list.tsx",
+        "components/featured-hotels.tsx",
+        "app/hotels/page.tsx",
+        "app/hotels/[id]/page.tsx",
+        "app/hotels/loading.tsx",
+        "models/Hotel.ts",
+        "models/Booking.ts",
+        "app/api/hotels/route.ts",
+        "app/api/hotels/[id]/route.ts",
+        "app/api/bookings/route.ts",
+        "app/api/bookings/[id]/route.ts"
+      ]
+    },
+    {
+      "name": "User Management",
+      "description": "User profile management, booking history, and role-based access",
+      "files": [
+        "models/User.ts",
+        "app/profile/page.tsx",
+        "components/profile/booking-history.tsx",
+        "components/profile/profile-settings.tsx",
+        "app/api/users/route.ts",
+        "app/api/users/[id]/route.ts",
+        "app/api/users/[id]/promote/route.ts",
+        "hooks/use-role-access.ts"
+      ]
+    },
+    {
+      "name": "Partner Portal",
+      "description": "Property management system for hotel partners with analytics and booking management",
+      "files": [
+        "app/partner/page.tsx",
+        "app/partner/layout.tsx",
+        "app/partner/add-property/page.tsx",
+        "app/partner/analytics/page.tsx",
+        "app/partner/bookings/page.tsx",
+        "app/partner/guests/page.tsx",
+        "app/partner/messages/page.tsx",
+        "app/partner/properties/page.tsx",
+        "app/partner/revenue/page.tsx",
+        "app/partner/reviews/page.tsx",
+        "app/partner/settings/page.tsx",
+        "components/partner/partner-overview.tsx",
+        "components/partner/properties-management.tsx",
+        "components/partner/bookings-management.tsx",
+        "components/partner/booking-analytics.tsx",
+        "components/partner/revenue-analytics.tsx",
+        "components/partner/reviews-management.tsx",
+        "components/partner/guests-list.tsx",
+        "components/partner/messages-inbox.tsx",
+        "components/partner/partner-settings.tsx",
+        "components/partner/partner-sidebar.tsx",
+        "models/PartnerSettings.ts",
+        "app/api/partner-settings/route.ts"
+      ]
+    },
+    {
+      "name": "Admin Dashboard",
+      "description": "Administrative interface for system management, user oversight, and analytics",
+      "files": [
+        "app/admin/page.tsx",
+        "app/admin/layout.tsx",
+        "app/admin/alerts/page.tsx",
+        "app/admin/analytics/page.tsx",
+        "app/admin/bookings/page.tsx",
+        "app/admin/partners/page.tsx",
+        "app/admin/properties/page.tsx",
+        "app/admin/reports/page.tsx",
+        "app/admin/revenue/page.tsx",
+        "app/admin/reviews/page.tsx",
+        "app/admin/security/page.tsx",
+        "app/admin/settings/page.tsx",
+        "app/admin/support/page.tsx",
+        "app/admin/users/page.tsx",
+        "components/admin/admin-overview.tsx",
+        "components/admin/admin-properties-management.tsx",
+        "components/admin/admin-sidebar.tsx",
+        "components/admin/user-management.tsx",
+        "models/SystemSettings.ts",
+        "models/SystemAlert.ts",
+        "models/SecurityEvent.ts",
+        "models/SupportTicket.ts",
+        "app/api/settings/route.ts",
+        "app/api/alerts/route.ts",
+        "app/api/alerts/[id]/route.ts",
+        "app/api/security/route.ts",
+        "app/api/security/[id]/route.ts",
+        "app/api/support/route.ts",
+        "app/api/support/[id]/route.ts"
+      ]
+    },
+    {
+      "name": "Property Management",
+      "description": "Property listing and management system for partners",
+      "files": [
+        "components/property-listing-form.tsx",
+        "components/property-benefits.tsx",
+        "app/become-partner/page.tsx",
+        "app/partner-registration/page.tsx",
+        "components/partner-registration-form.tsx",
+        "models/PartnerApplication.ts",
+        "app/api/partner-applications/route.ts",
+        "app/api/partner-applications/[id]/route.ts"
+      ]
+    },
+    {
+      "name": "Review System",
+      "description": "Hotel review and rating system with sentiment analysis",
+      "files": [
+        "models/Review.ts",
+        "app/api/reviews/route.ts",
+        "app/api/reviews/[id]/route.ts"
+      ]
+    },
+    {
+      "name": "Messaging System",
+      "description": "Internal messaging system for communication between users and partners",
+      "files": [
+        "models/Message.ts",
+        "app/api/messages/route.ts"
+      ]
+    },
+    {
+      "name": "File Upload System",
+      "description": "Image upload and management using ImageKit.io",
+      "files": [
+        "lib/imagekit.ts",
+        "app/api/upload/route.ts"
+      ]
+    },
+    {
+      "name": "UI Components",
+      "description": "Reusable UI components built with Radix UI and Tailwind CSS",
+      "files": [
+        "components/ui/accordion.tsx",
+        "components/ui/alert-dialog.tsx",
+        "components/ui/alert.tsx",
+        "components/ui/aspect-ratio.tsx",
+        "components/ui/avatar.tsx",
+        "components/ui/badge.tsx",
+        "components/ui/breadcrumb.tsx",
+        "components/ui/button.tsx",
+        "components/ui/calendar.tsx",
+        "components/ui/card.tsx",
+        "components/ui/carousel.tsx",
+        "components/ui/chart.tsx",
+        "components/ui/checkbox.tsx",
+        "components/ui/collapsible.tsx",
+        "components/ui/command.tsx",
+        "components/ui/context-menu.tsx",
+        "components/ui/dialog.tsx",
+        "components/ui/drawer.tsx",
+        "components/ui/dropdown-menu.tsx",
+        "components/ui/form.tsx",
+        "components/ui/hover-card.tsx",
+        "components/ui/input-otp.tsx",
+        "components/ui/input.tsx",
+        "components/ui/label.tsx",
+        "components/ui/menubar.tsx",
+        "components/ui/navigation-menu.tsx",
+        "components/ui/pagination.tsx",
+        "components/ui/popover.tsx",
+        "components/ui/progress.tsx",
+        "components/ui/radio-group.tsx",
+        "components/ui/resizable.tsx",
+        "components/ui/scroll-area.tsx",
+        "components/ui/select.tsx",
+        "components/ui/separator.tsx",
+        "components/ui/sheet.tsx",
+        "components/ui/sidebar.tsx",
+        "components/ui/skeleton.tsx",
+        "components/ui/slider.tsx",
+        "components/ui/sonner.tsx",
+        "components/ui/switch.tsx",
+        "components/ui/table.tsx",
+        "components/ui/tabs.tsx",
+        "components/ui/textarea.tsx",
+        "components/ui/toast.tsx",
+        "components/ui/toaster.tsx",
+        "components/ui/toggle-group.tsx",
+        "components/ui/toggle.tsx",
+        "components/ui/tooltip.tsx",
+        "components/ui/use-mobile.tsx",
+        "components/ui/use-toast.ts"
+      ]
+    },
+    {
+      "name": "Navigation & Layout",
+      "description": "Main navigation, footer, and layout components",
+      "files": [
+        "components/navbar.tsx",
+        "components/footer.tsx",
+        "components/hero-section.tsx",
+        "app/layout.tsx"
+      ]
+    },
+    {
+      "name": "Theme System",
+      "description": "Dark/light theme toggle and theme provider",
+      "files": [
+        "components/theme-provider.tsx",
+        "components/theme-toggle.tsx"
+      ]
+    },
+    {
+      "name": "Database Connection",
+      "description": "MongoDB connection and database utilities",
+      "files": [
+        "lib/mongodb.ts",
+        "lib/utils.ts",
+        "lib/with-api-handler.ts",
+        "lib/rate-limit.ts",
+        "lib/audit-log.ts",
+        "app/api/test-db/route.ts"
+      ]
+    },
+    {
+      "name": "Hooks & Utilities",
+      "description": "Custom React hooks and utility functions",
+      "files": [
+        "hooks/use-mobile.ts",
+        "hooks/use-toast.ts"
+      ]
+    }
+  ]
+}
+
